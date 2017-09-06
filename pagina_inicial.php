@@ -1,3 +1,11 @@
+<?php
+  session_start();
+   
+  require 'init.php';
+
+  require 'check.php';
+?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -16,6 +24,7 @@
 
 <body>
   <div>
+    <p style="text-align: right;">Bem-vindo ao seu painel, <?php echo $_SESSION['user_usuario']; ?> | <a href="logout.php"><button class="btn btn-lg btn-primary btn-block" type="submit">Sair</button></a></p>
     <h1 class="logo__title" data-name="Ipsum">WebRF2</h1>
   </div>
 
