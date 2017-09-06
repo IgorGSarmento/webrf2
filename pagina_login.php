@@ -10,8 +10,7 @@
 
 <body>
   <div class="wrapper">
-    <form action="login.php" method="post" class="form-signin">       
-      <h2 class="form-signin-heading">Login</h2>
+    <form action="login.php" method="post" class="form-signin">
       <input type="text" class="form-control" name="usuario" placeholder="Usu&aacute;rio" required="" autofocus="" />
       <input type="password" class="form-control" name="senha" placeholder="Senha" required=""/>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
