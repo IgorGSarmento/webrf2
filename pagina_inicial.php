@@ -29,7 +29,7 @@
   <div class="dropdown">
       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><?php echo $_SESSION['user_usuario']; ?><span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <li><a href="#">Editar Perfil</a></li>
+          <li><a href="editar_usuario.php">Editar Perfil</a></li>
           <li class="divider"></li>
           <li><a href="logout.php">Sair</a></li>
         </ul>
