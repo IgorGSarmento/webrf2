@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/pagina_login_style.css" type="text/css">  
 </head>
 
-<body>
+<body style="text-align: center">
   <div class="wrapper">
     <form action="login.php" method="post" class="form-signin">
       <input type="text" class="form-control" name="usuario" placeholder="Usu&aacute;rio" required="" autofocus="" />

@@ -33,9 +33,10 @@
       <li class="divider"></li>
       <li><a href="logout.php">Sair</a></li>
     </ul>
-  </div> 
-  <div>
-    <h1 class="logo__title" data-name="Nova">WebRF2</h1>
+  </div>
+
+  <div class="logo__title">
+    <h1 data-name="Nova">WebRF2</h1>
   </div>
 
   <section class="strips">
