@@ -1,16 +1,16 @@
 <?php
- 
+
 /**
  * Conecta com o MySQL usando PDO
  */
 function db_connect()
 {
     $PDO = new PDO("pgsql:host=".DB_HOST."; dbname=".DB_NAME."; user=".DB_USER."; password=".DB_PASS."");
- 
+    
     return $PDO;
 }
- 
- 
+
+
 /**
  * Cria o hash da senha, usando MD5 e SHA-1
  
@@ -36,8 +36,8 @@ function decryptIt( $str ) {
     	base64_decode($str), MCRYPT_MODE_CBC, md5(md5($cryptKey))), "\0");
     return( $strDecoded );
 }
- 
- 
+
+
 /**
  * Verifica se o usuário está logado
  */
@@ -47,6 +47,6 @@ function isLoggedIn()
     {
         return false;
     }
- 
+    
     return true;
 }

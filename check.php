@@ -1,8 +1,8 @@
 <?php
- 
+
 require_once 'init.php';
- 
+
 if (!isLoggedIn())
 {
-    header('Location: index.php');
+	header('Location: index.php');
 }

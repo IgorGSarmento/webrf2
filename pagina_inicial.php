@@ -1,9 +1,9 @@
 <?php
-  session_start();
+session_start();
 
-  require 'init.php';
+require 'init.php';
 
-  require 'check.php';
+require 'check.php';
 ?>
 
 <!DOCTYPE html>
