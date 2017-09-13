@@ -14,7 +14,7 @@ require 'init.php'
 	<h1>Cadastro WebRF2</h1>
 
 	<div class="wrapper">
-		<form action="login.php" method="post" class="form-signin" style="height: 325px">
+		<form action="cadastro_usuario.php" method="post" class="form-signin" style="height: 325px">
 			<input type="text" class="form-control" name="usuario" placeholder="Usu&aacute;rio" required="" autofocus="" />
 			<input type="password" class="form-control" name="senha" placeholder="Senha" required=""/>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Cadastro</button>

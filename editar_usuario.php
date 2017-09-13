@@ -62,7 +62,7 @@ if (!is_array($user))
     </form>-->
 
     <div class="wrapper">
-        <form action="login.php" method="post" class="form-signin" style="height: 325px">
+        <form action="edit.php" method="post" class="form-signin" style="height: 325px">
             <input type="text" class="form-control" name="usuario" value="<?php echo $user['usuario']?>" required="" autofocus="" />
             <input type="password" class="form-control" name="senha" placeholder="Senha" required=""/>
             <input type="hidden" name="id" value="<?php echo $id ?>">
