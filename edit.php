@@ -20,8 +20,8 @@ $hash_senha = encryptIt($senha);
 $PDO = db_connect();
 $sql = "UPDATE usuarios SET usuario = :usuario, senha = :senha WHERE id = :id";
 $stmt = $PDO->prepare($sql);
-$stmt->bindParam(':usuario', $usuario);
-$stmt->bindParam(':senha', $hash_senha);
+$stmt->bindParam(':usuario', $usuario, PDO::PARAM_STR);
+$stmt->bindParam(':senha', $hash_senha, PDO::PARAM_STR);
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
 if ($stmt->execute())

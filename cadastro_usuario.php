@@ -33,35 +33,35 @@ require 'init.php'
 
 
 	<?php
-	$usuario = isset($_POST['usuario']) ? $_POST['usuario'] : null;
-	$senha = isset($_POST['senha']) ? $_POST['senha'] : null;
+		$usuario = isset($_POST['usuario']) ? $_POST['usuario'] : null;
+		$senha = isset($_POST['senha']) ? $_POST['senha'] : null;
 
-					// validação (bem simples, só pra evitar dados vazios)
-	if (empty($usuario) || empty($senha))
-	{
-		echo "Volte e preencha todos os campos";
-		exit;
-	}
+						// validação (bem simples, só pra evitar dados vazios)
+		if (empty($usuario) || empty($senha))
+		{
+			echo "Volte e preencha todos os campos";
+			exit;
+		}
 
-	$hash_senha = encryptIt($senha);
+		$hash_senha = encryptIt($senha);
 
-					// insere no banco
-	$PDO = db_connect();
-	$sql = "INSERT INTO usuarios(usuario, senha) VALUES(:usuario, :senha)";
-	$stmt = $PDO->prepare($sql);
-	$stmt->bindParam(':usuario', $usuario);
-	$stmt->bindParam(':senha', $hash_senha);
+						// insere no banco
+		$PDO = db_connect();
+		$sql = "INSERT INTO usuarios(usuario, senha) VALUES(:usuario, :senha)";
+		$stmt = $PDO->prepare($sql);
+		$stmt->bindParam(':usuario', $usuario, PDO::PARAM_STR);
+		$stmt->bindParam(':senha', $hash_senha, PDO::PARAM_STR);
 
 
-	if ($stmt->execute())
-	{
-		echo "Usuário cadastrado com sucesso!";
-	}
-	else
-	{
-		echo "Erro ao cadastrar!";
-		print_r($stmt->errorInfo());
-	}
+		if ($stmt->execute())
+		{
+			echo "Usuário cadastrado com sucesso!";
+		}
+		else
+		{
+			echo "Erro ao cadastrar!";
+			print_r($stmt->errorInfo());
+		}
 	?>
 
 </body>
